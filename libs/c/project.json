@@ -1,0 +1,29 @@
+{
+  "root": "libs/c",
+  "sourceRoot": "libs/c/src",
+  "projectType": "library",
+  "targets": {
+    "codegen": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "echo '>>> codegen c'"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/c/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/c"],
+      "options": {
+        "jestConfig": "libs/c/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

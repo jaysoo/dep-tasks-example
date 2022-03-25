@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@dep-tasks/a": ["libs/a/src/index.ts"],
+      "@dep-tasks/b": ["libs/b/src/index.ts"],
+      "@dep-tasks/c": ["libs/c/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
